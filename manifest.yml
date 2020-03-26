@@ -1,0 +1,11 @@
+---
+applications:
+- name: springwebfluxdemoappShilpa
+  disk_quota: 1G
+  instances: 1
+  memory: 1G
+  path: target/springwebfluxdemo-0.0.1-SNAPSHOT.jar
+  health-check-type: process
+  buildpack: sap_java_buildpack
+  services:
+    - redis

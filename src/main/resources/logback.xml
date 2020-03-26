@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<configuration debug="false" scan="false">
+   <turboFilter class="com.sap.hcp.cf.logback.filter.CustomLoggingTurboFilter" />
+   <!-- write logs to console -->
+   <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+       <encoder>
+           <pattern>%d %-5level [%thread] %logger{0} [%mdc]>: %msg
+               %replace(%xEx){'\n', ' | '}%nopex%n</pattern>
+       </encoder>
+   </appender>
+   <!-- default log level for all loggers is INFO by default -->
+   <root level="${LOG_ROOT_LEVEL:-DEBUG}">
+       <appender-ref ref="STDOUT" />
+   </root>
+   <logger name="com.sap.hcp.cf" level="${LOG_HCP_CF_LEVEL:-DEBUG}" />
+</configuration>

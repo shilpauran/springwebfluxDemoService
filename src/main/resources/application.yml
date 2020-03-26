@@ -1,0 +1,6 @@
+---
+redis:
+  credentials:
+    hostname: ${vcap.services.redis.credentials.hostname:10.11.241.101}
+    port: ${vcap.services.redis.credentials.port:36516}
+    password: ${vcap.services.redis.credentials.password:ErOnZmzRj2q82vd0}
