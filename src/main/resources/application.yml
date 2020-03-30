@@ -4,3 +4,11 @@ redis:
     hostname: ${vcap.services.redis.credentials.hostname:10.11.241.101}
     port: ${vcap.services.redis.credentials.port:36516}
     password: ${vcap.services.redis.credentials.password:ErOnZmzRj2q82vd0}
+    
+spring:
+  rabbitmq:
+    host: "${vcap.services.rabbitmq.credentials.hostname:10.11.241.29}"
+    password: "${vcap.services.rabbitmq.credentials.password:L4aFPCSxWb85sc_1}"
+    port: "${vcap.services.rabbitmq.credentials.port:38793}"
+    username: "${vcap.services.rabbitmq.credentials.username:KGjpqgN3cSVVj3_S}"
+    virtual_host: "${vcap.services.rabbitmq.credentials.virtual_host:/}"
